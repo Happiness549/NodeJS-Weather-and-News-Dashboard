@@ -1,0 +1,31 @@
+{
+  "name": "nodejs-weather-and-news-dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsx src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Happiness549/NodeJS-Weather-and-News-Dashboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Happiness549/NodeJS-Weather-and-News-Dashboard/issues"
+  },
+  "homepage": "https://github.com/Happiness549/NodeJS-Weather-and-News-Dashboard#readme",
+  "dependencies": {
+    "@types/node": "^22.20.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^7.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14",
+    "tsx": "^4.23.13"
+  }
+}
