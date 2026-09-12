@@ -53,6 +53,8 @@ fetchUserId((error, userId) => {
     }
 })
 
+
+
 function promiseFetchUserId(): Promise<string> {
     console.log("fetching user id")
     return new Promise((resolve, reject) => {
@@ -93,6 +95,7 @@ promiseFetchUserId().then((userId) => {
 }).catch((error) => {
     console.error("An error occured in the promise chain:", error.message)
 })
+
 
 async function processUserData(): Promise<void> {
     try {
