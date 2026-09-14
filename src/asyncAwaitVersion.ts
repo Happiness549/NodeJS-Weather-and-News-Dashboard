@@ -31,4 +31,31 @@ async function GetWeather(location: string): Promise<void> {
   }
 }
 
+async function GetNews(): Promise<void> {
+  try {
+    const url = `https://dummyjson.com/posts?limit=5`;
+
+    https.get(url, (response) => {
+      let data = "";
+
+      response.on("data", (chunk) => {
+        data += chunk;
+      });
+
+      response.on("end", () => {
+        const newsData = JSON.parse(data);
+
+        console.log("News:", newsData);
+      });
+
+    }).on("error", (error) => {
+      console.error("Request error:", error.message);
+    });
+
+  } catch (error) {
+    console.error("An error occurred:", error);
+  }
+}
+
 GetWeather("Durban");
+GetNews();
