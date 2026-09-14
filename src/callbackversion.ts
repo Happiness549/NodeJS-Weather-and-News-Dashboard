@@ -1,6 +1,6 @@
 import * as https from "https";
 import dotenv from "dotenv";
-import { error } from "console";
+
 
 dotenv.config();
 
@@ -23,12 +23,12 @@ https.get(url, (response) => {
 
 
 function GetNews(callback: (error: Error | null, newsData?: unknown)=> void){
-    const NEWS_API_KEY = process.env.NEWS_API_KEY;
-    const url = `https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=NEWS_API_KEY`
+    const url = `https://dummyjson.com/posts?limit=5`
 
     https.get(url, (response) =>{
         let news = ""
-        response.on("news", (chunk) =>{
+
+        response.on("data", (chunk) =>{
             news += chunk
         })
 
@@ -55,5 +55,6 @@ GetNews((error, newsData) => {
   }
 
   console.log("News:", newsData);
+  console.log(newsData);
 
 });

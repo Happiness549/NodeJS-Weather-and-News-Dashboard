@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsx src/index.ts",
     "callback": "tsx src/callbackVersion.ts",
-    "promise": "tsx src/promiseVersion.ts"
+    "promise": "tsx src/promiseVersion.ts",
+    "async": "tsx src/asyncAwaitVersion.ts"
   },
   "repository": {
     "type": "git",
