@@ -23,7 +23,7 @@ https.get(url, (response) => {
 
 
 function GetNews(callback: (error: Error | null, newsData?: unknown)=> void){
-    const url = `https://dummyjson.com/posts?limit=5`
+    const url = `https://dummyjson.com/posts/2`
 
     https.get(url, (response) =>{
         let news = ""
@@ -55,6 +55,7 @@ GetNews((error, newsData) => {
   }
 
   console.log("News:", newsData);
-  console.log(newsData);
+  // console.log(newsData);
+  // console.log(newsData);
 
 });

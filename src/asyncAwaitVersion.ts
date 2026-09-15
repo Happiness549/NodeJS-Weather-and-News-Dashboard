@@ -33,7 +33,7 @@ async function GetWeather(location: string): Promise<void> {
 
 async function GetNews(): Promise<void> {
   try {
-    const url = `https://dummyjson.com/posts?limit=5`;
+    const url = `https://dummyjson.com/posts/2`;
 
     https.get(url, (response) => {
       let data = "";
